@@ -1,14 +1,14 @@
 <h1>Create a plane!</h1>
 
 <form action="/planes" method="post">
-	<label>Plane name:</label>
-	<input type="text" name="plane[name]">
+	<label><strong>Name:</strong></label>
+	<input type="text" name="plane[name]" placeholder="Plane's name?" autofocus required>
 	<br>
-	<label>Plane description:</label>
-	<input type="text" name="plane[design]">
+	<label><strong>Design:</strong></label>
+	<input type="text" name="plane[design]" placeholder="Plane's design?" required>
 	<br>
-	<label>Plane description:</label>
-	<textarea name="plane[description]"></textarea>
+	<label><strong>Description:</strong></label>
+	<textarea name="plane[description]" placeholder="What's the plane like?" required></textarea>
 	<%= token_tag form_authenticity_token %>
 	<br>
 	<button> Save Plane </button>

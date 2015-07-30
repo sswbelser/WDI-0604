@@ -1,0 +1,15 @@
+<h1>Edit a plane</h1>
+
+ <!-- form to update plane -->
+<%= form_for @plane do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br>
+
+	<%= f.label :design %>
+	<%= f.text_field :design %><br>
+
+	<%= f.label :description %>
+	<%= f.text_area :description %><br>
+
+	<%= f.submit "Update Plane" %>
+<% end %>

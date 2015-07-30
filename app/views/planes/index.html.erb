@@ -1,13 +1,10 @@
-<h1>Hello pilots!</h1>
+<h1>The Fleet</h1>
 <hr>
-
 <% @planes.each do |plane| %>
-
 	<div>
 		<h4>Name: <%= plane.name.titleize %></h4>
 		Type: <%= plane.design %><br>
 		Description: <%= plane.description %>
 	</div>
 	<hr>
-
 <% end %>
