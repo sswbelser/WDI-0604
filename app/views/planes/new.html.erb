@@ -1,0 +1,15 @@
+<h1>Create a plane!</h1>
+
+<form action="/planes" method="post">
+	<label>Plane name:</label>
+	<input type="text" name="plane[name]">
+	<br>
+	<label>Plane description:</label>
+	<input type="text" name="plane[design]">
+	<br>
+	<label>Plane description:</label>
+	<textarea name="plane[description]"></textarea>
+	<%= token_tag form_authenticity_token %>
+	<br>
+	<button> Save Plane </button>
+</form>
