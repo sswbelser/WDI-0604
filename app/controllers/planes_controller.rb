@@ -60,4 +60,18 @@ class PlanesController < ApplicationController
 		# redirect to plane's show page
 		redirect_to "/planes/#{db_plane.id}"
 	end
+
+	def destroy
+		# set id from url params
+		plane_id = params[:id]
+
+		# find plane in db by its id
+		db_plane = Plane.find(plane_id)
+
+		# delete plan in db
+		db_plane.destroy
+
+		#redirect to main page
+		redirect_to "/planes"
+	end
 end

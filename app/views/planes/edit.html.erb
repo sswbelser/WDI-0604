@@ -1,6 +1,6 @@
 <h1>Edit a plane</h1>
 
- <!-- form to update plane -->
+<!-- form to update plane -->
 <%= form_for @plane do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %><br>
@@ -13,3 +13,9 @@
 
 	<%= f.submit "Update Plane" %>
 <% end %>
+
+	<form action="/planes/<%= @plane.id %>" method="post">
+		<input name="_method" type="hidden" value="delete">
+		<%= token_tag form_authenticity_token %>
+		<button>Delete Plane</button>
+	</form>

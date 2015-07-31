@@ -2,9 +2,11 @@
 <hr>
 <% @planes.each do |plane| %>
 	<div>
-		<h4>Name: <%= plane.name.titleize %></h4>
+		<h4>Name: <%= plane.name %></h4>
 		Type: <%= plane.design %><br>
 		Description: <%= plane.description %>
 	</div>
+	<button><a type="button" href="planes/<%=plane.id%>">View This Plane</a></button>
+	<button><a type="button" href="planes/<%=plane.id%>/edit">Edit This Plane</a></button>
 	<hr>
 <% end %>
